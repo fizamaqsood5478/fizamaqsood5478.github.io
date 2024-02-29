@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my webpage</title>
+    <link rel="stylesheet" href="fiza.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <img src="logo.jpg" alt="logo img">
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="main">
+        <h2 class="about-me">About me</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint voluptatem ipsa dolores nulla, fugit quo quisquam velit molestiae modi rem. Dolores architecto nam repellendus nobis consequuntur perferendis quia ea consequatur! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor quidem recusandae consectetur placeat beatae praesentium asperiores? Earum ipsa, quis iste ea animi ipsam sunt nesciunt repellat vero adipisci possimus? Voluptatem. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, consequatur repellat omnis iure amet modi possimus reiciendis voluptate officiis maiores, dignissimos, deleniti odit alias suscipit quae sit ullam ipsum. Architecto. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae exercitationem sed quidem quas suscipit velit laudantium ea quod! Nostrum vel eius, alias obcaecati soluta voluptatibus impedit incidunt reprehenderit! Odit, ipsam.</p>
+        <h2 class="pic">Pictures</h2>
+        <div class="images">
+            <img src="pic1.jpg" alt="pic">
+            <img src="pic2.jpg" alt="pic">
+            <img src="pic3.jpg" alt="pic">
+        </div>
+        <h2>Main Content</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi repellat dolore qui non sint vel natus neque quo? Autem, nulla! Sed doloribus modi sequi ratione maxime consectetur expedita ex. Magnam? lo Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum necessitatibus explicabo praesentium laudantium corporis, fugit quidem distinctio, ratione sit tempore rerum eum saepe sunt quos repellat blanditiis illum facere debitis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio similique sint deserunt totam accusamus reprehenderit illum? Esse tempora recusandae dignissimos, atque ipsum, soluta ducimus quam, consequatur quia aliquam iure consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae commodi animi similique eum consequuntur et quibusdam eos id odio aliquam cupiditate <mark> unde vero tempora optio eligendi accusamus  ea, ipsum soluta! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, libero voluptatibus  eos cumque illo soluta accusamus animi veniam, quidem voluptatem sequi qui quo </mark>tempora rem. Iure facere officia voluptas eos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium eum explicabo voluptatibus expedita nobis ipsa praesentium magni voluptas, non voluptate culpa tempora hic quis recusandae cupiditate aliquid unde odit rem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum error nisi minus veritatis, ducimus eos repellendus culpa officiis rerum voluptas autem maiores totam molestiae quasi accusamus numquam doloribus aspernatur sapiente? Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, perferendis tempora nostrum temporibus eius explicabo. Excepturi, blanditiis impedit dolore nam at repudiandae veritatis, voluptates labore molestias quia ullam esse inventore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, labore veritatis nostrum vitae pariatur libero delectus ab nesciunt quas molestiae dolor praesentium sapiente ducimus dolore quisquam. Voluptatum expedita voluptates nesciunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae eligendi itaque in blanditiis, labore rerum quae, ad animi aspernatur minus voluptatibus tempora corporis quasi. Molestiae cupiditate totam similique distinctio non? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus autem esse velit labore rerum maxime cum vero quae veritatis? Ad accusamus quia totam dolorum vero debitis alias tenetur corrupti ut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil consectetur, ullam perspiciatis nesci
+        </p>
+        <p>Today's date is <time datetime="2024-02-29">Feburary 29, 2024</time>.</p>
+        <audio src="https://file-examples.com/storage/fe98e6ab1965df346a899de/2017/11/file_example_MP3_700KB.mp3" controls>your browser does not support the element</audio>
+        <br>
+        <video src="sample-5s.mp4" controls>your browser does not support this video</video>
+        <br>
+        <canvas id="myCanvas" width="400" height="400" style="border:1px solid #000;"></canvas>
+        <script>
+            var canvas = document.getElementById('myCanvas');
+            var ctx = canvas.getContext('2d');
+            
+            // Example: drawing a red rectangle
+            ctx.fillStyle = 'red';
+            ctx.fillRect(50, 50, 100, 100); // x, y, width, height
+            
+            // Example: drawing a blue circle
+            ctx.beginPath();
+            ctx.arc(200, 200, 50, 0, 2 * Math.PI);
+            ctx.fillStyle = 'blue';
+            ctx.fill();
+            ctx.closePath();
+        </script>
+
+
+        <form class="form">
+            <h3>contact form</h3>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" aria-required="true">
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" aria-required="true">
+            <br><br>
+            <label for="message">Message:</label>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+    <footer class="footer">
+        <div class="copyright">
+            &copy; 2024 my Website. All rights reserved.
+        </div>
+        <div class="social-media-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+</body>
+</html>

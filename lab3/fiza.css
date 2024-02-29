@@ -1,0 +1,138 @@
+/* Navigation bar styles */
+body {
+    background-color: rgb(210, 197, 212); /* Change to desired background color */
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribute items evenly along the main axis */
+    background-color: rgb(206, 155, 216);
+    padding: 10px 20px; /* Add padding to the navigation bar */
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.nav li {
+    margin-right: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #666;
+}
+
+.logo img {
+    max-height: 40px;
+    margin-right: 20px;
+}
+
+.main {
+    width: 80%;
+    margin: 0 auto; /* This will center the main content horizontally */
+    text-align: center; /* This will center the text content within the main */
+}
+
+.about-me {
+    padding: 20px;
+    text-align: center; /* Reset text alignment for the heading */
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify; /* Align paragraphs justify for better readability */
+}
+
+
+
+video{
+    width: 300px;
+    height: 300px;
+}
+
+
+.form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: aquamarine;
+}
+
+.form h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.form label {
+    display: block;
+    font-weight: bold;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form textarea {
+    height: 150px; /* Adjust the height as needed */
+}
+
+.form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+
+footer {
+    background-color: rgb(206, 155, 216);
+    padding: 20px;
+    text-align: center;
+}
+
+.copyright {
+    color: #666;
+    font-size: 14px;
+}
+
+.social-media-links {
+    margin-top: 10px;
+}
+
+.social-media-links a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+.social-media-links a:hover {
+    color: #00f; /* Change to desired hover color */
+}
