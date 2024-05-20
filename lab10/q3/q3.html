@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+</head>
+<body>
+    <h2>Student Details</h2>
+    <?php
+    // Include the PHP class definition file
+    include 'student.php';
+
+    // Create three instances of the Student class
+    $student1 = new Student(101, "John Doe", "Computer Science", 2023);
+    $student2 = new Student(102, "Alice Smith", "Electrical Engineering", 2022);
+    $student3 = new Student(103, "Bob Johnson", "Mechanical Engineering", 2024);
+    ?>
+
+    <div>
+        <h3>Student 1</h3>
+        <p><strong>Roll No:</strong> <?php echo $student1->RollNo; ?></p>
+        <p><strong>Name:</strong> <?php echo $student1->Name; ?></p>
+        <p><strong>Branch:</strong> <?php echo $student1->Branch; ?></p>
+        <p><strong>Year:</strong> <?php echo $student1->Year; ?></p>
+    </div>
+
+    <div>
+        <h3>Student 2</h3>
+        <p><strong>Roll No:</strong> <?php echo $student2->RollNo; ?></p>
+        <p><strong>Name:</strong> <?php echo $student2->Name; ?></p>
+        <p><strong>Branch:</strong> <?php echo $student2->Branch; ?></p>
+        <p><strong>Year:</strong> <?php echo $student2->Year; ?></p>
+    </div>
+
+    <div>
+        <h3>Student 3</h3>
+        <p><strong>Roll No:</strong> <?php echo $student3->RollNo; ?></p>
+        <p><strong>Name:</strong> <?php echo $student3->Name; ?></p>
+        <p><strong>Branch:</strong> <?php echo $student3->Branch; ?></p>
+        <p><strong>Year:</strong> <?php echo $student3->Year; ?></p>
+    </div>
+</body>
+</html>

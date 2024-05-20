@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Data Display</title>
+</head>
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+    </style>
+<body>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+
+<script>
+// JSON Data as a string
+const jsonString = `
+{
+    "id": "0001",
+    "type": "donut",
+    "name": "Cake",
+    "ppu": 0.55,
+    "batters": {
+        "batter": [
+            { "id": "1001", "type": "Regular" },
+            { "id": "1002", "type": "Chocolate" },
+            { "id": "1003", "type": "Blueberry" },
+            { "id": "1004", "type": "Devil's Food" }
+        ]
+    },
+    "topping": [
+        { "id": "5001", "type": "None" },
+        { "id": "5002", "type": "Glazed" },
+        { "id": "5005", "type": "Sugar" },
+        { "id": "5007", "type": "Powdered Sugar" },
+        { "id": "5006", "type": "Chocolate with Sprinkles" },
+        { "id": "5003", "type": "Chocolate" },
+        { "id": "5004", "type": "Maple" }
+    ]
+}
+`;
+
+// Parse the JSON string into a JavaScript object
+const data = JSON.parse(jsonString);
+
+// Extract the required data
+const mainInfo = `${data.id}, ${data.type}, ${data.name}`;
+const batterInfo1 = `${data.batters.batter[0].id}, ${data.batters.batter[0].type}`;
+const batterInfo2 = `${data.batters.batter[3].id}, ${data.batters.batter[3].type}`;
+const toppingInfo = `${data.topping[4].id}, ${data.topping[4].type}`;
+
+// Display the data inside the respective <p> tags
+document.getElementById("demo").innerText = mainInfo;
+document.getElementById("demo1").innerText = batterInfo1;
+document.getElementById("demo2").innerText = batterInfo2;
+document.getElementById("demo3").innerText = toppingInfo;
+</script>
+
+</body>
+</html>
