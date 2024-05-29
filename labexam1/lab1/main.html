@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My News Website</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="index.html">Registration</a></li>
+                <li><a href="connect.php">Records</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+            <button class="name-button">Name</button>
+        </nav>
+    </header>
+
+    <main>
+        <div class="posts-container" id="posts-container">
+            <!-- Posts will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>My News Website</h2>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3> 
+                <div class="quick-links">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="quick-links">
+                    <ul>
+                        <li><a href="#">Travels</a></li>
+                        <li><a href="#">Promo Fli</a></li>
+                    </ul>
+                </div>
+
+                <div class="quick-links">
+                    <ul>
+                        <li><a href="#">Recommendations</a></li>
+                        <li><a href="#">Guides</a></li>
+                    </ul>
+                </div>
+
+                <div class="quick-links">
+                    <ul>
+                        <li><a href="#">Mission Statement</a></li>
+                        <li><a href="#">The Team</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2021 - 2022 My News Website All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Fetch data from the News API
+        const apiKey = "863fc723114041f390208685d2849b68";
+        const url = `https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${apiKey}`;
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                const postsContainer = document.getElementById('posts-container');
+                data.articles.forEach(article => {
+                    const post = document.createElement('div');
+                    post.classList.add('post');
+
+                    const title = document.createElement('h3');
+                    title.textContent = article.title;
+
+                    const description = document.createElement('p');
+                    description.textContent = article.description;
+
+                    const source = document.createElement('p');
+                    source.textContent = `Source: ${article.source.name}`;
+
+                    const link = document.createElement('a');
+                    link.textContent = 'Read more';
+                    link.href = article.url;
+                    link.target = '_blank';
+
+                    post.appendChild(title);
+                    post.appendChild(description);
+                    post.appendChild(source);
+                    post.appendChild(link);
+
+                    postsContainer.appendChild(post);
+                });
+            })
+            .catch(error => console.log("Error fetching data:", error));
+    </script>
+</body>
+</html>
